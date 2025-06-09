@@ -31,7 +31,7 @@ const SendText = () => {
   return (
     <>
       <Wrapper>
-        <div className="bg-white p-6 rounded-lg shadow-md">
+        <div className="bg-[#ECEFF7] p-6 rounded-lg shadow-md">
           <h2 className="text-3xl font-extrabold text-gray-900 mb-6 text-center">
             Send a Text to Nearby Devices, Instantly!
           </h2>
@@ -55,7 +55,7 @@ const SendText = () => {
             id="send-text-input"
             type="text"
             placeholder="e.g., 'long text or url'"
-            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent "
+            className="w-full px-4 py-2 border bg-[#FAFAFA] border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent "
           />
           
           {error &&

@@ -33,7 +33,7 @@ const ScanText = () => {
   return (
     <>
       <Wrapper>
-        <div className="h-fit w-full bg-green-50 p-8 rounded-lg shadow-xl mx-auto my-10">
+        <div className="h-fit w-full bg-green-100 p-8 rounded-lg shadow-xl mx-auto my-10">
           <h2 className="text-3xl font-extrabold text-gray-900 mb-6 text-center">
             Instantly Retrieve Shared Texts
           </h2>
@@ -50,7 +50,7 @@ const ScanText = () => {
             <input
               type="text"
               id="get-text"
-              className="flex-grow px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg"
+              className="flex-grow px-4 py-2 border bg-[#FAFAFA] border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg"
               placeholder="e.g., 123ABC789"
               value={textId}
               onChange={(e) => setTextId(e.target.value)}
