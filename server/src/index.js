@@ -9,10 +9,6 @@ const app = express();
 import textRouter from './routers/text.js';
 
 
-
-
-
-
 const corsOptions = {
     origin: 'http://localhost:5173', // Replace with your actual frontend domain
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // Allowed HTTP methods
@@ -40,7 +36,9 @@ app.use("/text/v1", textRouter)
 
 
 
-app.listen(process.env.PORT, ()=>{
-    console.log(`Server is running at port ${process.env.PORT} `)
+
+const PORT = process.env.PORT
+app.listen(PORT, ()=>{
+    console.log(`Server is running at port ${PORT} `)
+    connectDB();   
 });
-connectDB();   
