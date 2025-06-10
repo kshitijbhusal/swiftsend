@@ -27,7 +27,7 @@ const SendText = () => {
         setId(sentText.data.text_id);
       }
     }
-  };
+  }
   return (
     <>
       <Wrapper>

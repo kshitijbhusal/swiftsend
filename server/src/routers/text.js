@@ -48,7 +48,3 @@ router.get("/get", async  (req, res) => {
 export default router;
 
 
-
-//   const getText = await Text.findOne({
-//     text_id
-//   });
