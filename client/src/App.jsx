@@ -6,16 +6,14 @@ import './App.css'
 import Home from './pages/Home'
 import Nav from './components/ui/Nav'
 
+
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
     <Nav/>
-    <Home/>
-
-     
-       
+    <Home/>  
     </>
   )
 }

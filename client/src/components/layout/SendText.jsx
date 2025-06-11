@@ -3,6 +3,8 @@ import axios from "axios";
 import Wrapper from "../ui/Wrapper";
 import { useState } from "react";
 
+const backendUrl = import.meta.env.VITE_BACKEND_URL
+
 const SendText = () => {
   const [text, setText] = useState("");
   const [error, setError] = useState(false);
@@ -20,7 +22,7 @@ const SendText = () => {
       setError(true);
     } else {
       setError(false);
-      const sentText = await axios.post("http://localhost:3000/text/v1/post", {
+      const sentText = await axios.post(`${backendUrl}/text/v1/post`, {
         text,
       });
       if (sentText.status == 200) {

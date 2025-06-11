@@ -6,11 +6,13 @@ import bodyParser from 'body-parser';
 import { connectDB } from './configs/db.js';
 const app = express();
 import textRouter from './routers/text.js';
+dotenv.config({ path: '../.env' });
 
 const port = process.env.PORT || 3000
-const frontendOrigin = process.env.FRONTEND_ORIGIN
+const frontendOrigin=process.env.FRONTEND_ORIGIN
 
-dotenv.config({ path: '../.env' });
+
+
 
 
 const corsOptions = {
@@ -21,7 +23,7 @@ const corsOptions = {
     optionsSuccessStatus: 204 // Some legacy browsers (IE11, various SmartTVs) choke on 200
 };
 
-app.use(cors(corsOptions));
+app.use(cors(corsOptions)); 
 
 
 

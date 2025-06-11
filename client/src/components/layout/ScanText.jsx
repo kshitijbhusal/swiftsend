@@ -2,13 +2,15 @@ import axios from "axios";
 import React, { useState } from "react";
 import Wrapper from "../ui/Wrapper";
 
+const backendUrl = import.meta.env.VITE_BACKEND_URL
+
 const ScanText = () => {
   const [displayText, setDisplayText] = useState(false);
   const [textId, setTextId] = useState("");
   const [fetchedContent, setFetchedContent] = useState("");
 
   const handleGetTextClick = async () => {
-    const getId = await axios.get("http://localhost:3000/text/v1/get", {
+    const getId = await axios.get( `${backendUrl}/text/v1/get`, {
       params: {
         text_id: textId,
       },
