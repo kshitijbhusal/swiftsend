@@ -22,7 +22,3 @@ export const connectDB = () => {
 
 
 
-// GnSSC9BpVMhdkCV2
-
-
-// mongodb+srv://bhushalkshitiz8888:GnSSC9BpVMhdkCV2@cluster0.6almqyo.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
