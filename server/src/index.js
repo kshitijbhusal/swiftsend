@@ -1,6 +1,5 @@
 
 import dotenv from 'dotenv';
-dotenv.config({ path: '../.env' });
 import express from 'express';
 import cors from 'cors';
 import bodyParser from 'body-parser';
@@ -8,9 +7,14 @@ import { connectDB } from './configs/db.js';
 const app = express();
 import textRouter from './routers/text.js';
 
+const port = process.env.PORT || 3000
+const frontendOrigin = process.env.FRONTEND_ORIGIN
+
+dotenv.config({ path: '../.env' });
+
 
 const corsOptions = {
-    origin: 'http://localhost:5173', // Replace with your actual frontend domain
+    origin: `${frontendOrigin}`, // Replace with your actual frontend domain
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // Allowed HTTP methods
     allowedHeaders: 'Content-Type,Authorization', // Allowed request headers
     credentials: true, // Allow cookies and HTTP authentication credentials
@@ -37,8 +41,8 @@ app.use("/text/v1", textRouter)
 
 
 
-const PORT = process.env.PORT
-app.listen(PORT, ()=>{
-    console.log(`Server is running at port ${PORT} `)
+
+app.listen(port, ()=>{
+    console.log(`Server is running at port ${port} `)
     connectDB();   
 });
