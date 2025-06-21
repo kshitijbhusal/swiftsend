@@ -11,7 +11,7 @@ export const connectDB = () => {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
-    console.log("Databse connected !")   
+    console.log("Databse connected !")
   } catch (error) {
     console.log("Database connection failed !", error);
 
